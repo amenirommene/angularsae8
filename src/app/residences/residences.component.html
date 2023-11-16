@@ -1,0 +1,25 @@
+<br>
+Name : <input [value]="name" (keyup)="setName(x.value)" #x>  {{name}}
+{{x.type}}
+<br>
+Name (NgModel) : <input [(ngModel)]="name2"> {{name2}}
+<ul>
+    <div *ngFor="let r of listResidences">
+    <li  *ngIf="r.name == name2 || name2 == ''">
+        {{ r.id }} - {{r.name}} - <img [src]="r.image"> 
+        <a [routerLink]="['/details',r.id]">Détails</a>
+        <button (click)="addToFavoris(r)">Add to favoris</button>
+ <button (click)="getApartments(r.id)">Show appartments</button>
+    
+</li>
+</div>
+  
+
+</ul>
+
+<h1>Mes résidences favoris</h1>
+<ul>
+    <li *ngFor="let r of residenceFavoris">
+        {{r.id}} - {{r.name}}
+    </li>
+</ul>

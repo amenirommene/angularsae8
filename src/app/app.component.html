@@ -1,0 +1,16 @@
+<a routerLink="home">Residences</a>
+<a routerLink="add">addResidence</a>
+<router-outlet></router-outlet>
+
+
+<!--interpolation : Databinding: TS -> HTML -->
+{{ title }}
+<!---event binding -->
+<button (click)="f('a')">test</button>
+<!---{{f('a')}}--->
+<input value="title">
+<!--property binding-->
+<input [value]="title">
+
+
+
