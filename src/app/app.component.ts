@@ -11,4 +11,9 @@ export class AppComponent {
   f(n:string){
     console.log("test "+n);
   }
+
+  clickMe(n:string){
+    //traitement à faire quand l'event btnclicked est emis par le fils
+  alert("je suis le parent "+n);
+  }
 }

@@ -1,16 +1,19 @@
 <form [formGroup]="myForm" (submit)="addApartment()">
-
+<div formGroupName="sousgroupe">
     Apart Num: <input type="text" formControlName="apartNum"> <br>
-    <div *ngIf="apartNum.invalid">
-        Numéro appartement obligatoire
+    <div *ngIf="appartNum.invalid">
+        <app-errors [errorMsg]="'required'"></app-errors>
     </div>
     Floor Num: <input type="text" formControlName="floorNum"> <br>
     Surface : <input type="text" formControlName="surface"> 
     <div *ngIf="surface.touched && surface.errors">
-       <div *ngIf="surface.errors['required']"> Champ obligatoire </div> 
-       <div *ngIf="surface.errors['pattern']"> Champ ne doit contenir que des chiffres </div> 
+       <div *ngIf="surface.errors['required']"> <app-errors [errorMsg]="'required'" ></app-errors> </div> 
+       <div *ngIf="surface.errors['pattern']"> <app-errors [errorMsg]="'pattern'" ></app-errors> </div> 
     </div>
     <br>
-
+</div>
+    <div *ngIf="sousgroupe.valid">
+    Surfacte terrace : <input formControlName="surfaceTerrace">
+</div>
     <button type="submit" [disabled]="myForm.invalid">Save</button>
 </form>

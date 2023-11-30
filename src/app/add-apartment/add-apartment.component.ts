@@ -20,9 +20,11 @@ console.log(this.appartment);
 }
 ngOnInit(){
   this.myForm=new FormGroup({
+    sousgroupe:new FormGroup({
     apartNum:new FormControl('valeur par défaut', [Validators.required]),
     surface:new FormControl('',[Validators.required, Validators.pattern("[1-9][0-9]*")]),
-    floorNum:new FormControl()
+    floorNum:new FormControl()}),
+    surfaceTerrace: new FormControl()
     
   })
   console.log(this.myForm);
@@ -30,13 +32,19 @@ ngOnInit(){
 
 //retourner l'objet formControl apartNum
 get appartNum(){
-  return this.myForm.get('apartNum');
+  return this.myForm.get('sousgroupe').get('apartNum');
 }
 
 get fNum(){
-  return this.myForm.get('floorNum');
+  return this.myForm.get('sousgroupe').get('floorNum');
 }
 get surface(){
-  return this.myForm.get('surface');
+  return this.myForm.get('sousgroupe').get('surface');
+}
+get surfaceTerrace(){
+  return this.myForm.get('surfaceTerrace');
+}
+get sousgroupe(){
+  return this.myForm.get('sousgroupe');
 }
 }

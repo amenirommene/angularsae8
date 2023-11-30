@@ -10,6 +10,7 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddApartmentComponent } from './add-apartment/add-apartment.component';
+import { ErrorsComponent } from './shared/errors/errors.component';
 
 @NgModule({
   //les composants liés à ce module
@@ -20,7 +21,8 @@ import { AddApartmentComponent } from './add-apartment/add-apartment.component';
     FormResidenceComponent,
     ApartmentsComponent,
     NotFoundComponent,
-    AddApartmentComponent
+    AddApartmentComponent,
+    ErrorsComponent
   ],
   //la liste des modules dont le(s) composant(s) a besoin
   imports: [
