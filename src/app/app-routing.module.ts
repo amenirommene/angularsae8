@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -8,6 +9,7 @@ import { ResidencesComponent } from './residences/residences.component';
 const routes: Routes = [
   //localhost:4200
   {path:'', redirectTo:"home", pathMatch:"full" },
+  {path:'addApartment', component:AddApartmentComponent},
   //localhost:4200/home
   {path:'home', component:ResidencesComponent},
   //localhost:4200/add

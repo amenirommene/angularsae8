@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { ResidencesComponent } from './residences/residences.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 
 @NgModule({
   //les composants liés à ce module
@@ -18,13 +19,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ResidencesComponent,
     FormResidenceComponent,
     ApartmentsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AddApartmentComponent
   ],
   //la liste des modules dont le(s) composant(s) a besoin
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //utile pour pouvoir utiliser ngModel
+    FormsModule, //utile pour pouvoir utiliser ngModel
+    ReactiveFormsModule
   ],
   //les services à utiliser
   providers: [],
