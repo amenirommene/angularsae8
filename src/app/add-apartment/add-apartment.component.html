@@ -1,7 +1,7 @@
 <form [formGroup]="myForm" (submit)="addApartment()">
 
     Apart Num: <input type="text" formControlName="apartNum"> <br>
-    <div *ngIf="appartNum.invalid">
+    <div *ngIf="apartNum.invalid">
         Numéro appartement obligatoire
     </div>
     Floor Num: <input type="text" formControlName="floorNum"> <br>
