@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./errors.component.css']
 })
 export class ErrorsComponent {
-
+  name : string;
   @Input() errorMsg;
  // @Input() errorMsgRequired;
  // @Input() errorMsgPattern;

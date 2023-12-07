@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { TestComponent } from './test/test.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular4sae8';
+  @ViewChild(TestComponent) monfils: TestComponent;
 
+ngAfterViewInit(){
+  console.log(this.monfils.prop1);
+}
   f(n:string){
     console.log("test "+n);
+    //console.log(this.monfils.prop1);
   }
 
   clickMe(n:string){

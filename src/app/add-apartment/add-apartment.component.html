@@ -2,13 +2,13 @@
 <div formGroupName="sousgroupe">
     Apart Num: <input type="text" formControlName="apartNum"> <br>
     <div *ngIf="appartNum.invalid">
-        <app-errors [errorMsg]="'required'"></app-errors>
+        <app-errors  [errorMsg]="'required'"></app-errors>
     </div>
     Floor Num: <input type="text" formControlName="floorNum"> <br>
-    Surface : <input type="text" formControlName="surface"> 
+    Surface : <input type="text" formControlName="surface">
     <div *ngIf="surface.touched && surface.errors">
-       <div *ngIf="surface.errors['required']"> <app-errors [errorMsg]="'required'" ></app-errors> </div> 
-       <div *ngIf="surface.errors['pattern']"> <app-errors [errorMsg]="'pattern'" ></app-errors> </div> 
+       <div *ngIf="surface.errors['required']"> <app-errors [errorMsg]="'required'" ></app-errors> </div>
+       <div *ngIf="surface.errors['pattern']"> <app-errors [errorMsg]="'pattern'" ></app-errors> </div>
     </div>
     <br>
 </div>

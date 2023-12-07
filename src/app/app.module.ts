@@ -11,7 +11,7 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddApartmentComponent } from './add-apartment/add-apartment.component';
 import { ErrorsComponent } from './shared/errors/errors.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   //les composants liés à ce module
   declarations: [
@@ -29,7 +29,8 @@ import { ErrorsComponent } from './shared/errors/errors.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, //utile pour pouvoir utiliser ngModel
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   //les services à utiliser
   providers: [],

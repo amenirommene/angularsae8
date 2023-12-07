@@ -7,11 +7,12 @@
 <!--interpolation : Databinding: TS -> HTML -->
 {{ title }}
 <!---event binding -->
-<button (click)="f('a')">test</button>
+<button (click)="f('a')">test**</button>
 <!---{{f('a')}}--->
-<input value="title">
+<input value="title" #x> {{x.value}}
 <!--property binding-->
 <input [value]="title">
 
-<app-test (btnclicked)="clickMe($event)" [prop2]="title"></app-test>
+<app-test #t (btnclicked)="clickMe($event)" [prop2]="title"></app-test>
 
+{{t.prop1}}
