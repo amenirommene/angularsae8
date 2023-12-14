@@ -2,6 +2,7 @@ import { Residence } from './../core/models/residence';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Apartment } from '../core/models/apartment';
 
 //Décorateur
 @Injectable({
@@ -37,6 +38,9 @@ export class ApartmentService {
   return this._http.get<Residence[]>("http://localhost:3000/residences");
   }
 
+  addApartment(a:Apartment):Observable<Apartment>{
+   return this._http.post<Apartment>("http://localhost:3000/apartments",a);
+  }
   getAllApartments(){
 
   }
